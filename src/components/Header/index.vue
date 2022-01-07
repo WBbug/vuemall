@@ -54,12 +54,12 @@ methods:{
     goSearch() {
       //代表的是如果有query参数也带过去
       if (this.$route.query) {
-        let loction = {
+        let location = {
           name: "search",
           params: { inputText: this.inputText || undefined },
         };
-        loction.query = this.$route.query;
-        this.$router.push(loction);
+        location.query = this.$route.query;
+        this.$router.push(location);
       }
     }
 }

@@ -10,6 +10,9 @@ import '@/mock/mockServe'
 import TypeNav from '@/components/TypeNav'
 //三级联动组件--全局组件 注册
 Vue.component(TypeNav.name,TypeNav)
+import Pagenation from '@/components/Pagenation'
+Vue.component(Pagenation.name,Pagenation)
+
 
 import mySwiper from '@/components/mySwiper'
 Vue.component(mySwiper.name,mySwiper)

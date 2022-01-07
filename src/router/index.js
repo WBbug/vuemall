@@ -8,6 +8,7 @@ import Home from '@/pages/Home'
 import Search from '@/pages/Search'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
+import Detail from '@/pages/Detail'
 //配置路由
 export default new VueRouter({
 routes: [
@@ -43,10 +44,21 @@ routes: [
             show:false
         }
     },
+    {
+        path:'/detail/:skuid',
+        component:Detail,
+        meta:{
+            show:false
+        }
+    },
 //重定向
 {
     path:'*',
     redirect:'/home'
 }
-]
+],
+scrollBehavior(to,from,savedPositon){
+    //y=0代表最上方
+    return{y:0}
+}
 })

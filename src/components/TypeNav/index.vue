@@ -120,9 +120,7 @@ export default {
           query.category3Id = category3id;
         }
       }
-
       location.query = query;
-      console.log(location);
       this.$router.push(location);
     },
     mousein(){
