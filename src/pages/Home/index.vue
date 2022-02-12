@@ -36,6 +36,7 @@ components:{
 mounted(){
     //执行 获取floor数据
 this.$store.dispatch('getFloor')
+this.$store.dispatch("getUserInfo",);
 
 },
 computed:{

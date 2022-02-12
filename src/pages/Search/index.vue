@@ -63,12 +63,13 @@
                     </strong>
                   </div>
                   <div class="attr">
-                    <a
+                    <router-link :to="`/detail/${goods.id}`" >
+                                          <a
                       target="_blank"
                       href="item.html"
-                      title="促销信息，下单即赠送三个月CIBN视频会员卡！【小米电视新品4A 58 火爆预约中】"
                       >{{ goods.title }}</a
                     >
+                    </router-link>
                   </div>
                   <div class="commit">
                     <i class="command">已有<span>2000</span>人评价</i>
@@ -107,7 +108,7 @@ import SearchSelector from "./SearchSelector/SearchSelector";
 import { mapState } from "vuex";
 import { mapGetters } from "vuex";
 export default {
-  name: "Search",
+  name: "search",
   data() {
     return {
       searchParams: {
@@ -157,7 +158,6 @@ export default {
     
   },
   methods: {
-
     getData() {
       this.$store.dispatch("getSearchList", this.searchParams);
     },
